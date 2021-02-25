@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SQL审核平台</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="applicable-device"content="pc,mobile">
+<link href="../statics/css/bootstrap.css" rel="stylesheet">
+<link href="../statics/css/bxslider.css" rel="stylesheet">
+<link href="../statics/css/style.css" rel="stylesheet">
+<script src="../statics/js/jquery.min.js"></script><script src="../statics/js/bxslider.min.js"></script><script src="../statics/js/common.js"></script><script src="../statics/js/bootstrap.js"></script><!--[if lt IE 9]>
+  <script src="../statics/js/html5shiv.min.js"></script>
+  <script src="../statics/js/respond.min.js"></script><![endif]--><SCRIPT language=javaScript>function CheckJob()
+{
+  if (document.myform.title.value.length==""){
+    alert ("留言标题不能为空！");
+    document.myform.title.focus();
+    return false;
+  }
+  if (document.myform.name.value.length==""){
+    alert ("姓名不能为空！");
+    document.myform.name.focus();
+    return false;
+  }
+  if (document.myform.tel.value.length==""){
+    alert ("电话不能为空！");
+    document.myform.tel.focus();
+    return false;
+  }
+ }
+</SCRIPT>
+</head>
+
+<body>
+<header>
+  <div class="top_menu">
+    <div class="container"><span class="top_name">SQL审核平台</span>
+      <div class="language"> 你好∷&nbsp;欧阳铁蛋 </div>
+    </div>
+  </div>
+
+  </nav>
+
+  <script type="text/javascript">    $('.bxslider').bxSlider({
+      adaptiveHeight: true,
+      infiniteLoop: true,
+      hideControlOnEnd: true,
+      auto:true
+    });
+</script></header>
+<!-- main -->
+<div class="container">
+  <div class="row"><!-- right -->
+    <div class="col-xs-12 col-sm-8 col-md-9" style="float:right">
+      <div class="list_box">
+        <h2 class="left_h1"><SQL上线></SQL上线></h2>
+        <div class="feedback">
+          <form id="myform" name="myform" class="form-horizontal" method="post" action="/">
+
+            <div class="form-group">
+              <label for="add" class="col-sm-3 control-label">联系地址：</label>
+              <div class="col-sm-6">
+                <input type="text" name="add" class="form-control" id="add">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="contents" class="col-sm-3 control-label">sql：</label>
+              <div class="col-sm-6">
+                <textarea name="contents" class="form-control" rows="6"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-3 col-sm-10">
+                <button type="submit" name="button" value="Send" class="btn btn-danger page-btn">提交</button>
+                &nbsp;
+                <button type="reset" name="reset" class="btn btn-default grey-btn">重新填写</button>
+              </div>
+              <h5>{{.title}}</h5>
+            </div>
+            <input type="hidden" name="__hash__" value="245bbf20dc4b5c44b16763110df850cc_2ddb20c223633262613c8bb51e3e396d" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- left -->
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="left_nav" id="categories">
+        <ul class="left_nav_ul" id="firstpane">
+          <li><a class="biglink" href="javascript:;">sql审核</a><span class="menu_head">+</span>
+            <ul class="left_snav_ul menu_body">
+              <li><a href="javascript:;">sql上线</a></li>
+              <li><a href="javascript:;">sql分析</a></li>
+            </ul>
+          </li>
+          <li><a class="biglink" href="javascript:;">sql查询</a><span class="menu_head">+</span>
+            <ul class="left_snav_ul menu_body">
+              <li><a href="javascript:;">mysql查询</a></li>
+              <li><a href="javascript:;">查询权限申请</a></li>
+            </ul>
+          </li>
+          <li><a class="biglink" href="javascript:;">产品大类3</a><span class="menu_head">+</span>
+            <ul class="left_snav_ul menu_body">
+            </ul>
+          </li>
+          <li><a class="biglink" href="javascript:;">产品大类4</a><span class="menu_head">+</span>
+            <ul class="left_snav_ul menu_body">
+              <li><a href="javascript:;">产品小类4_1</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <form id="searchform" method="get" action="/T03/search/index/g/c.html">
+        <div class="input-group search_group">
+          <input type="text" name="name" class="form-control input-sm" placeholder="产品搜索">
+          <span class="input-group-btn"><span id="submit_search" onclick="searchform.submit();" title="产品搜索" class="glyphicon glyphicon-search btn-lg" aria-hidden="true"></span></span></div>
+        <input type="hidden" name="__hash__" value="245bbf20dc4b5c44b16763110df850cc_2ddb20c223633262613c8bb51e3e396d" />
+      </form>
+
+      <div class="index_contact">
+        <h1 class="title_h1">联系我们</h1>
+        <span class="title_span">CONTACT US</span>
+        <p style="padding-top:20px;">联系人：xxxxxx</p>
+        <p>手机：873468834</p>
+        <p>电话：020-873468834</p>
+        <p>邮箱：xxxxxx@163.com</p>
+        <p>地址： 广东省广州市天河区天平架沙太路沙太路</p>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom footer_nav">
+  <div class="foot_nav btn-group dropup"><a class="dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:;"><span class="glyphicon glyphicon-share btn-lg" aria-hidden="true"></span> 分享</a>
+    <div class="dropdown-menu webshare"><!-- JiaThis Button BEGIN -->
+      <div class="jiathis_style_32x32"> <a class="jiathis_button_qzone"></a> <a class="jiathis_button_tsina"></a> <a class="jiathis_button_tqq"></a> <a class="jiathis_button_weixin"></a> <a class="jiathis_button_renren"></a> <a href="javascript:;" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a> </div>
+      <script type="text/javascript" src="../statics/js/jia.js" charset="utf-8"></script>
+      <!-- JiaThis Button END --></div>
+  </div>
+  <div class="foot_nav"><a href="javascript:;"><span class="glyphicon glyphicon-phone btn-lg" aria-hidden="true"></span>手机</a></div>
+  <div class="foot_nav"><a id="gotocate" href="javascript:;"><span class="glyphicon glyphicon-th-list btn-lg" aria-hidden="true"></span>分类</a></div>
+  <div class="foot_nav"><a id="gototop" href="javascript:;"><span class="glyphicon glyphicon-circle-arrow-up btn-lg" aria-hidden="true"></span>顶部</a></div>
+</nav>
+
+<!--客服面板-->
+<link rel="stylesheet" type="text/css" href="../statics/css/online.css" />
+<div id="cmsFloatPanel">
+  <div class="ctrolPanel"><a class="service" href="javascript:;"></a><a class="message" href="javascript:;"></a><a class="qrcode" href="javascript:;"></a><a class="arrow" title="返回顶部" href="javascript:;"></a></div>
+  <div class="servicePanel">
+    <div class="servicePanel-inner">
+      <div class="serviceMsgPanel">
+        <div class="serviceMsgPanel-hd"><a href="javascript:;"><span>关闭</span></a></div>
+        <div class="serviceMsgPanel-bd"><!--在线QQ-->
+          <div class="msggroup"><a target="_blank" href="javascript:;"><img class="qqimg" src="http://wpa.qq.com/pa?p=2:593036114:52" alt="QQ在线客服"/>技术支持</a></div>
+          <!--在线MSN-->
+          <div class="msggroup"><a href="javascript:;" target="blank"><img class="qqimg" src="../statics/images/msn.jpg" alt="MSN在线客服"/>xxxxxx</a></div>
+          <!--在线SKYPE-->
+          <div class="msggroup"><a href="javascript:;"><img class="qqimg" src="../statics/images/skype.gif" alt="SKYPE在线客服">xxxxxx</a></div>
+          <!--淘宝旺旺-->
+          <div class="msggroup"><a target=blank href="javascript:;"><img SRC="http://amos.im.alisoft.com/online.aw?v=2&uid=xxxxxx&site=cntaobao&s=1&charset=utf-8" alt="点击联系我"></a></div>
+          <!--旺旺国内版-->
+          <div class="msggroup"><a target="_blank" href="javascript:;" ><img src="http://amos.alicdn.com/online.aw?v=2&uid=martin7752&site=cnalichn&s=10&charset=UTF-8" alt="点击联系我"/></a></div>
+          <!--旺旺国际版-->
+          <div class="msggroup"><a class="alitalk-link" data-uid="alibabatest01" target="_blank" href="javascript:;"><img class="qqimg" src="http://amos.alicdn.com/online.aw?v=2&uid=alibabatest01&site=enaliint&s=22&charset=UTF-8" alt="点击联系我"/>abcde</a></div>
+        </div>
+        <div class="serviceMsgPanel-ft"></div>
+      </div>
+      <div class="arrowPanel">
+        <div class="arrow02"></div>
+      </div>
+    </div>
+  </div>
+  <div class="messagePanel">
+    <div class="messagePanel-inner">
+      <div class="formPanel">
+        <div class="formPanel-bd"><!-- JiaThis Button BEGIN -->
+          <div class="jiathis_style_32x32"> <a class="jiathis_button_qzone"></a> <a class="jiathis_button_tsina"></a> <a class="jiathis_button_tqq"></a> <a class="jiathis_button_weixin"></a> <a class="jiathis_button_renren"></a> <a href="javascript:;" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a> </div>
+          <script type="text/javascript" src="../statics/js/jia.js" charset="utf-8"></script>
+          <!-- JiaThis Button END --><a type="button" class="btn btn-default btn-xs" href="javascript:;" style="margin: 6px 0px 0px 10px;">关闭</a></div>
+      </div>
+      <div class="arrowPanel">
+        <div class="arrow01"></div>
+        <div class="arrow02"></div>
+      </div>
+    </div>
+  </div>
+  <div class="qrcodePanel">
+    <div class="qrcodePanel-inner">
+      <div class="codePanel">
+        <div class="codePanel-hd"><span style="float:left">用手机扫描二维码</span><a href="javascript:;"><span>关闭</span></a></div>
+        <div class="codePanel-bd"><img src="../statics/images/529c3fcc09d41.jpg" alt="二维码"/></div>
+      </div>
+      <div class="arrowPanel">
+        <div class="arrow01"></div>
+        <div class="arrow02"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../statics/js/online.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+var winHeight=200;
+var timer=null;
+function show(){
+    document.getElementById("popWin").style.display="block"; 
+    timer=setInterval("lift(5)",2);
+} 
+function hid(){
+        timer=setInterval("lift(-5)",2);
+} 
+function lift(n) { 
+    var w=document.getElementById("popWin"); 
+    var h=parseInt(w.style.height||w.currentStyle.height);
+    if (h<winHeight && n>0 || h>1 && n<0){
+        w.style.height=(h+n).toString()+"px"; 
+    } 
+    else
+        {
+        w.style.display=(n>0?"block":"none");
+                clearInterval(timer);
+    } 
+} 
+window.onload=function(){ 
+        setTimeout("show()",1000);
+} 
+</script>
